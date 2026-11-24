@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Payroll System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Employee Payroll System</h1>
+      <p>Employee Salary Management</p>
+    </header>
+
+    <div class="cards">
+      <div>Total Employees <h2 id="total">0</h2></div>
+      <div>Total Payout <h2 id="payout">₹0</h2></div>
+      <div>Average Salary <h2 id="average">₹0</h2></div>
+    </div>
+
+    <section class="card">
+      <h2>Add Employee</h2>
+      <form id="form">
+        <input id="id" placeholder="Employee ID" required>
+        <input id="name" placeholder="Employee Name" required>
+        <select id="dept">
+          <option>IT</option>
+          <option>HR</option>
+          <option>Finance</option>
+          <option>Sales</option>
+        </select>
+        <input type="number" id="basic" placeholder="Basic Salary" min="5000" required>
+        <button type="submit">Add Employee</button>
+      </form>
+      <p id="error"></p>
+    </section>
+
+    <section class="card">
+      <h2>Payroll Records</h2>
+      <input id="search" placeholder="Search Employee">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Department</th>
+            <th>Basic</th><th>Net Salary</th><th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
